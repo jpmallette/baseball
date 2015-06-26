@@ -9,7 +9,7 @@
 #                                                            #
 #                                                            #
 # Optimal team formation under constraint &                  #
-# descriptive statistics of player                           #                       #  
+# descriptive statistics of player with shiny                #  
 #                                                            #
 #                                                            #
 #                                                            #
@@ -51,7 +51,7 @@ nom_pre_jo2 <- subset(nom_pre_jo, select=c(playerID, nameFirst, nameLast))
 name <- paste(nom_pre_jo2$nameFirst, nom_pre_jo2$nameLast, sep = " ")
 nom_pre_jo3 <- cbind(nom_pre_jo2,name)
 
-# read the file "fielding that contain the folowing fields
+# read the file "fielding.csv" that contain the folowing fields
 # 1B = first_base
 # 2B = second_base
 # 3B = third_base
@@ -62,12 +62,12 @@ nom_pre_jo3 <- cbind(nom_pre_jo2,name)
 # RF = right_field
 # SS = short_stop
 
+
 pos_jo <- read.csv(file="Fielding.csv",head=TRUE,sep=",")
 pos_jo2 <- subset(pos_jo, yearID=="2013", select=c(playerID, POS, G))
 
 # We only consider that a player has a unique field position. 
 # The position selected is the position with the maximum of game played
-
 pos_jo3 <- ddply(pos_jo2,~playerID,function(x){x[which.max(x$G),]}) 
 
 # Cleaning and transformation of categorical variables
@@ -140,7 +140,7 @@ batting<-Baseball_Data[,19]
 salaire<-Baseball_Data[,17]
 nb_joueur<-Baseball_Data[,20]
 
-# maximal Budget 
+# Constraints 
 budget=100000000
 nbre_joueur_max=25
 
@@ -187,7 +187,7 @@ cat("Maximum WAR",res$optimum)
 cat("L'équipe optimale est composée des joueurs suivants:")
 Solution_optimale
 
-# Save the optimal team file 
+# Save the optimal team 
 # To file will be useful to analyse the trajectory of pitchs and hits
 saveRDS(Solution_optimale,"C:\\R_Files\\Solution_optimale.rds")
 

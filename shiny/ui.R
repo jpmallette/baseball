@@ -3,21 +3,20 @@ library(shiny)
 
 shinyUI(pageWithSidebar(
   
-  # Titre de l'application
+  # Application title
  headerPanel(
   h3("Profil d'un joueur pour la saison 2013",align = "center")),
 
-  # Paneau Gauche
+  # Left Panel
    sidebarPanel(
-     helpText("Cette application est dediee a Monsieur Plante et Monsieur
-	Ben-Ameur"),
+     helpText("This application is dedicated to coach"),
      selectInput("id.frappeur", label = h5("Selectionner un frappeur"), 
                  choices = liste.frappeur),
      selectInput("id.lanceur", label = h5("Selectionner un lanceur"), 
                  choices = liste.lanceur)),
 
-  # Paneau principal ou les graphiques sont affiches. Le tabPanel permet 
-  # de faire afficher les graphiques dans des onglets differents
+  # Principal panel with graphics. the tabPanel enable 
+  # to show the graphics in different tabs
 
   mainPanel(
     tabsetPanel(
