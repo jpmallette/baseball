@@ -1,6 +1,6 @@
 # Analyse Baseball Data
 
-This project was a M.Sc. project of 2 folks. We did essentialy 2 things in this project. 
+M.Sc. project of 2 folks. We did essentialy 2 things in this project. 
 * We formed an optimal baseball team by solving a Linear optimisation problem that we had to defined.
 * We created a Shiny web application to vizualize hit and pitch data of the player identified with the linear optimisation.
 
