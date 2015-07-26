@@ -4,7 +4,7 @@ This project was a M.Sc. project of 2 folks. We did essentialy 2 things in this 
 * We formed an optimal baseball team by solving a Linear optimisation problem that we had to defined.
 * We created a Shiny web application to vizualize hit and pitch data of the player identified with the linear optimisation.
 
-the full documentation of the project can be found here : 
+the full documentation of the project in Microsoft Word Format can be found here : https://goo.gl/mqqye8
 
 The full documentaiton is in french. However,for the viewer that only speak english, please note that screenshot found in the report will allow you to understand all the project. For more information, please see the code.
 * Graph 5.4.1 show the first tab of Shiny application. We can visualize the trajectory of all hits for one season for each  individual hitter of the optimal team.
