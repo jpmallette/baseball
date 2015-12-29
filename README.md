@@ -1,6 +1,7 @@
 # Analyse Baseball Data
 
-Master project. team of two. The main topic :
+This repository gather the code of my software project. The topics of the project were :
+
 * Formed an optimal baseball team by solving a linear optimisation problem. We decided to maximize the Wins Aboves Replacement (WAR) under budget and team composition constraint (2-3 pitcher, 1-2 catcher etc).
 * We created a Shiny web application with R to vizualize hit and pitch data of the team.
 
